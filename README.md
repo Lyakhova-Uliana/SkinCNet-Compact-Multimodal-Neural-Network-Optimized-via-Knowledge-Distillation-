@@ -18,7 +18,6 @@ The study proposes a multimodal neural network system based on the specialized c
 | Inference time on mobile device | less than 110 ms |
 | Energy per inference | 0.039 mJ |
 
-## Repository Structure
 SkinCNet/
 ├── MNN based on DenseNet_201 as a model teacher.ipynb # Training of DenseNet_201 teacher model
 ├── MNN based on DenseNet_201 as a model teacher test/ # Test results for DenseNet_201 teacher
@@ -28,6 +27,9 @@ SkinCNet/
 ├── MNN based on ResNeXt_101 as a model teacher test/ # Test results for ResNeXt_101 teacher
 ├── MNN based on specialized CNN/ # SkinCNet student model implementation
 ├── Ablation Study SkinCNet.ipynb # Ablation study experiments
+├── requirements.txt # Python dependencies (pip)
+├── environment.yml # Conda environment specification
+├── LICENSE # MIT License
 └── README.md # This file
 
 
