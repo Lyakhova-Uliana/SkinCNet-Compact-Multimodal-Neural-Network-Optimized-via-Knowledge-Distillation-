@@ -18,21 +18,6 @@ The study proposes a multimodal neural network system based on the specialized c
 | Inference time on mobile device | less than 110 ms |
 | Energy per inference | 0.039 mJ |
 
-SkinCNet/
-├── MNN based on DenseNet_201 as a model teacher.ipynb # Training of DenseNet_201 teacher model
-├── MNN based on DenseNet_201 as a model teacher test/ # Test results for DenseNet_201 teacher
-├── MNN based on Inception_v4 as a model teacher.ipynb # Training of Inception_v4 teacher model
-├── MNN based on Inception_v4 as a model teacher test/ # Test results for Inception_v4 teacher
-├── MNN based on ResNeXt_101 as a model teacher.ipynb # Training of ResNeXt_101 teacher model
-├── MNN based on ResNeXt_101 as a model teacher test/ # Test results for ResNeXt_101 teacher
-├── MNN based on specialized CNN/ # SkinCNet student model implementation
-├── Ablation Study SkinCNet.ipynb # Ablation study experiments
-├── requirements.txt # Python dependencies (pip)
-├── environment.yml # Conda environment specification
-├── LICENSE # MIT License
-└── README.md # This file
-
-
 ## Software Requirements
 
 The experiments were conducted using the following software environment:
@@ -51,8 +36,10 @@ The experiments were conducted using the following software environment:
 conda env create -f environment.yml
 conda activate NN_3_11_11
 
+
 ### Option 2: Using pip
 
+```bash
 python -m venv venv
 # On Windows:
 venv\Scripts\activate
@@ -60,3 +47,12 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install -r requirements.txt
+
+Running the Experiments
+The repository contains Jupyter notebooks organized by experiment type. To reproduce the results presented in the manuscript, execute the notebooks in the following order:
+Step 1: Train Teacher Models
+
+```bash
+jupyter notebook "MNN based on DenseNet_201 as a model teacher.ipynb"
+jupyter notebook "MNN based on ResNeXt_101 as a model teacher.ipynb"
+jupyter notebook "MNN based on Inception_v4 as a model teacher.ipynb"
